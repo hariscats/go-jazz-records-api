@@ -1,6 +1,6 @@
 # Simple Go Album API
 
-This is a simple web server written in Go using the Gin web framework. The server provides a basic API to manage a list of music albums. You can retrieve the list of albums and add new albums to the list.
+This is a simple web server written in Go using the Gin web framework. The server provides a basic API to manage a list of music albums.
 
 ## Features
 
@@ -40,29 +40,6 @@ Retrieves the list of all albums.
 - **URL**: `/albums`
 - **Method**: `GET`
 - **Response**: JSON array of album objects
-- **Example**:
-  ```json
-  [
-      {
-          "id": "1",
-          "title": "Blue Train",
-          "artist": "John Coltrane",
-          "price": 56.99
-      },
-      {
-          "id": "2",
-          "title": "Jeru",
-          "artist": "Gerry Mulligan",
-          "price": 17.99
-      },
-      {
-          "id": "3",
-          "title": "Sarah Vaughan and Clifford Brown",
-          "artist": "Sarah Vaughan",
-          "price": 39.99
-      }
-  ]
-  ```
 
 ### POST /albums
 
@@ -71,25 +48,7 @@ Adds a new album to the list.
 - **URL**: `/albums`
 - **Method**: `POST`
 - **Request Body**: JSON object representing the album
-- **Example**:
-  ```json
-  {
-      "id": "4",
-      "title": "Kind of Blue",
-      "artist": "Miles Davis",
-      "price": 29.99
-  }
-  ```
 - **Response**: JSON object of the newly added album
-- **Example**:
-  ```json
-  {
-      "id": "4",
-      "title": "Kind of Blue",
-      "artist": "Miles Davis",
-      "price": 29.99
-  }
-  ```
 
 ## Code Explanation
 
@@ -154,9 +113,4 @@ func main() {
 
 	router.Run("localhost:8080")
 }
-```
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 ```
