@@ -114,3 +114,18 @@ func main() {
 	router.Run("localhost:8080")
 }
 ```
+
+### Test APIs
+
+```sh
+# Test GET /albums
+curl -X GET http://localhost:8080/albums
+
+# Test GET /albums/:id (replace :id with actual ID)
+curl -X GET http://localhost:8080/albums/1
+
+# Test POST /albums
+curl -X POST http://localhost:8080/albums \
+    -H "Content-Type: application/json" \
+    -d '{"id": "7", "title": "New Album", "artist": "New Artist", "price": 19.99}'
+```
